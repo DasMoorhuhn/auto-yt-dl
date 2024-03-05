@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  auto-yt-dl:
+    #image: guhu007/auto-yt-dl
+    image: auto-yt-dl
+    container_name: "auto-yt-dl"
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./data:/app/data
+      - ./Downloads:/app/Downloads

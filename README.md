@@ -13,6 +13,12 @@ WARNING: This has not been tested on all systems.
 
 >docker run -d --name='auto-yt-dl' --net='bridge' --privileged=false -p '5000:5000/tcp' -v '/test':'/app/Downloads':'rw' 'xxguhuxx/yt-channel-dl:latest'
 
+## How to docker-compose
+
+```shell
+docker-compose up
+```
+
 ## How to use
 After the docker is started you´ll be able to access the Web Gui on [ipOfYourMachine]:5000.
 Enter a Channel URL and press "Add". The Channel Name and URL should now be listed below the input field.

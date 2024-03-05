@@ -1,5 +1,3 @@
-# syntax=docker/dockerfile:1
-
 FROM python:3.12.2-alpine
 WORKDIR /app
 
@@ -13,9 +11,11 @@ ENV DATA_PERM=770
 COPY requirements.txt requirements.txt
 RUN pip3.12 install -r requirements.txt
 
-COPY . .
+COPY src/ .
+COPY data .
+COPY Downloads .
 RUN chmod a+x run.sh
 
 EXPOSE 5000
 
-CMD ["/app/run.sh"]
+CMD ["sh", "/app/run.sh"]
